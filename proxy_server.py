@@ -35,7 +35,7 @@ def latest_run():
         "order_by": "-id",
         "limit": 1
     }
-    headers = {"Authorization": f"Token {DBT_API_KEY}"}
+    headers = {"Authorization": f"Bearer {DBT_API_KEY}"}
     try:
         r = requests.get(url, headers=headers, params=params, timeout=15)
         r.raise_for_status()
