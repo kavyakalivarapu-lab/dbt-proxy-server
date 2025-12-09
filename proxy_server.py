@@ -8,7 +8,8 @@ DBT_ACCOUNT_ID = os.environ.get("DBT_ACCOUNT_ID")
 DBT_API_KEY = os.environ.get("DBT_API_KEY")    # Service token (dbtc_...)
 PROXY_SECRET = os.environ.get("PROXY_SECRET")  # a random secret string for proxy auth
 
-DBT_BASE = "https://cloud.getdbt.com/api/v2"
+DBT_BASE = "https://mn615.us1.dbt.com/api/v2"
+
 
 def require_secret():
     header = request.headers.get("X-Proxy-Secret") or request.args.get("proxy_secret")
